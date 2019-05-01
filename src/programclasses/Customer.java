@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Customer {
     private String name;
-    private Vector rentals = new Vector();
+    private Vector<Rental> rentals = new Vector<>();
 
     public Customer(String newname) {
         name = newname;
@@ -21,23 +21,25 @@ public class Customer {
 
     public String statement() {
 
-        Enumeration enum_rentals = rentals.elements();
-        String result = "Rental Record for " + this.getName() + "\n";
-        result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
         double total = 0;
         int frequentRenterPoints = 0;
+        Enumeration<Rental> enum_rentals = rentals.elements();
+        StringBuilder result = new StringBuilder();
+
+
+        result.append("Rental Record for ").append(this.getName()).append("\n");
+        result.append("\t").append("Title").append("\t").append("\t").append("Days").append("\t").append("Amount").append("\n");
 
         while (enum_rentals.hasMoreElements()) {
-            Rental each = (Rental) enum_rentals.nextElement();
+            Rental each = enum_rentals.nextElement();
             total += calcPrice(each);
-            result += entry(each);
+            result.append(entry(each));
             frequentRenterPoints += calcFrequentReterPoints(each);
         }
-        //add footer lines
 
-        result += "Amount owed is " + String.valueOf(total) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
-        return result;
+        result.append("Amount owed is ").append(String.valueOf(total)).append("\n");
+        result.append("You earned ").append(String.valueOf(frequentRenterPoints)).append(" frequent renter points");
+        return result.toString();
     }
 
     private double calcPrice(Rental rental) {
