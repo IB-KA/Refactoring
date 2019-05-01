@@ -1,12 +1,11 @@
-package programClasses;
+package programclasses;
 
 /**
  * Note that Java console applications need to be run through the java runtime
  * by running "java -jar JarFile.jar" in the command line.
  * Java console applications can not be previewed in the Compilr IDE, only applets can.
  */
-public class Program
-{
+public class Program {
     /**
      * This is the main entry point for the application
      */
@@ -14,7 +13,7 @@ public class Program
 
     public static void main(String args[]) {
         String result;
-        System.out.println("Welcome to the programClasses.Movie Store");
+        System.out.println("Welcome to the programclasses.Movie Store");
         Movie m1 = new NewMovie("movie1");
         Movie m2 = new ChildrensMovie("movie2");
         Rental r1 = new Rental(m1, 10);

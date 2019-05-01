@@ -1,4 +1,4 @@
-package programClasses;
+package programclasses;
 
 import java.util.Enumeration;
 import java.util.Vector;

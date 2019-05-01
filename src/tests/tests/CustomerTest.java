@@ -3,7 +3,7 @@ package tests;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import programClasses.*;
+import programclasses.*;
 
 class CustomerTest {
 

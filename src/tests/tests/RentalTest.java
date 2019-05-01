@@ -2,9 +2,9 @@ package tests;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import programClasses.ChildrensMovie;
-import programClasses.Movie;
-import programClasses.Rental;
+import programclasses.ChildrensMovie;
+import programclasses.Movie;
+import programclasses.Rental;
 
 import static org.junit.jupiter.api.Assertions.*;
 

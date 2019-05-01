@@ -1,4 +1,4 @@
-package programClasses;
+package programclasses;
 
 public class NewMovie extends Movie {
 

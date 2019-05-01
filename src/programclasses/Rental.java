@@ -1,4 +1,4 @@
-package programClasses;
+package programclasses;
 
 public class Rental {
     private Movie movie;
@@ -12,6 +12,7 @@ public class Rental {
     public int getDaysRented() {
         return daysRented;
     }
+
     public Movie getMovie() {
         return movie;
     }
