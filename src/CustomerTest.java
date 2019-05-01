@@ -36,6 +36,8 @@ class CustomerTest {
         Assertions.assertTrue(customer.statement().contains("childrens" + "\t" + "\t" + 5 + "\t" + "4.5"));
         Assertions.assertTrue(customer.statement().contains("regular" + "\t" + "\t" + 3 + "\t" + "3.5"));
         Assertions.assertTrue(customer.statement().contains("new release" + "\t" + "\t" + 10 + "\t" + "30.0"));
+        Assertions.assertTrue(customer.statement().contains("owed is 38.0"));
+        Assertions.assertTrue(customer.statement().contains("earned 4 frequent"));
 
     }
 }
