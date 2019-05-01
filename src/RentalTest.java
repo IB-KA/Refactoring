@@ -11,7 +11,7 @@ class RentalTest {
 
     @BeforeEach
     void setUp() {
-        testMovie = new Movie("Testmovie", 0);
+        testMovie = new ChildrensMovie("Testmovie");
         daysRented = 3;
         testRental = new Rental(testMovie, daysRented);
     }
@@ -24,7 +24,7 @@ class RentalTest {
     @Test
     void getMovie() {
         assertTrue(testMovie.getTitle() == testRental.getMovie().getTitle());
-        assertTrue(testMovie.getPriceCode() == testRental.getMovie().getPriceCode());
+        assertTrue(testMovie instanceof ChildrensMovie);
     }
 
 

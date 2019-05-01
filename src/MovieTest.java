@@ -11,19 +11,7 @@ class MovieTest {
     @BeforeEach
     void setUp() {
         title = "Testmovie";
-        priceCode = 0;
-        testmovie = new Movie(title, priceCode);
-    }
-
-    @Test
-    void getPriceCode() {
-        assertEquals(0, testmovie.getPriceCode());
-    }
-
-    @Test
-    void setPriceCode() {
-        testmovie.setPriceCode(0);
-        assertEquals(0, testmovie.getPriceCode());
+        testmovie = new NewMovie(title);
     }
 
     @Test

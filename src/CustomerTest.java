@@ -15,7 +15,7 @@ class CustomerTest {
 
     @org.junit.jupiter.api.Test
     void addRental() {
-        Rental rental = new Rental(new Movie("Test movie", 0), 3);
+        Rental rental = new Rental(new ChildrensMovie("Test movie"), 3);
         customer.addRental(rental);
         // Assertions.assertEquals(1,customer1.rentals.size());
         //Can't be tested before touching the code
@@ -29,9 +29,9 @@ class CustomerTest {
 
     @org.junit.jupiter.api.Test
     void statement() {
-        customer.addRental(new Rental(new Movie("childrens", 2), 5));
-        customer.addRental(new Rental(new Movie("regular", 0), 3));
-        customer.addRental(new Rental(new Movie("new release", 1), 10));
+        customer.addRental(new Rental(new ChildrensMovie("childrens"), 5));
+        customer.addRental(new Rental(new RegularMovie("regular"), 3));
+        customer.addRental(new Rental(new NewMovie("new release"), 10));
         Assertions.assertTrue(customer.statement().contains("for John"));
         Assertions.assertTrue(customer.statement().contains("childrens" + "\t" + "\t" + 5 + "\t" + "4.5"));
         Assertions.assertTrue(customer.statement().contains("regular" + "\t" + "\t" + 3 + "\t" + "3.5"));
