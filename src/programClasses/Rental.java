@@ -1,9 +1,12 @@
-class Rental {
+package programClasses;
+
+public class Rental {
     private Movie movie;
     private int daysRented;
-    public Rental(Movie newmovie, int newdaysRented) {
-        movie = newmovie;
-        daysRented = newdaysRented;
+
+    public Rental(Movie newMovie, int newDaysRented) {
+        movie = newMovie;
+        daysRented = newDaysRented;
     }
 
     public int getDaysRented() {
@@ -13,7 +16,7 @@ class Rental {
         return movie;
     }
 
-    int calcPoints() {
+    public int calcPoints() {
         if ((this.movie instanceof NewMovie) && this.daysRented > 1)
             return 2;
         else return 1;

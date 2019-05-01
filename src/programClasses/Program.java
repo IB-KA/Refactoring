@@ -1,3 +1,5 @@
+package programClasses;
+
 /**
  * Note that Java console applications need to be run through the java runtime
  * by running "java -jar JarFile.jar" in the command line.
@@ -8,12 +10,11 @@ public class Program
     /**
      * This is the main entry point for the application
      */
-    
-    
-    public static void main(String args[]) 
-    {
+
+
+    public static void main(String args[]) {
         String result;
-        System.out.println("Welcome to the Movie Store");
+        System.out.println("Welcome to the programClasses.Movie Store");
         Movie m1 = new NewMovie("movie1");
         Movie m2 = new ChildrensMovie("movie2");
         Rental r1 = new Rental(m1, 10);

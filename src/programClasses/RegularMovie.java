@@ -1,3 +1,5 @@
+package programClasses;
+
 public class RegularMovie extends Movie {
 
     public RegularMovie(String newtitle) {

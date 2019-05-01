@@ -1,12 +1,16 @@
+package tests;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import programClasses.Movie;
+import programClasses.NewMovie;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MovieTest {
     private String title;
     private int priceCode;
-    Movie testmovie;
+    private Movie testmovie;
 
     @BeforeEach
     void setUp() {

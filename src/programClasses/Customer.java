@@ -1,23 +1,25 @@
+package programClasses;
+
 import java.util.Enumeration;
 import java.util.Vector;
 
-class Customer {
+public class Customer {
     private String name;
     private Vector rentals = new Vector();
 
-    Customer(String newname) {
+    public Customer(String newname) {
         name = newname;
     }
 
-    void addRental(Rental arg) {
+    public void addRental(Rental arg) {
         rentals.addElement(arg);
     }
 
-    String getName() {
+    public String getName() {
         return name;
     }
 
-    String statement() {
+    public String statement() {
 
         Enumeration enum_rentals = rentals.elements();
         String result = "Rental Record for " + this.getName() + "\n";
