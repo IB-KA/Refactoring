@@ -26,4 +26,6 @@ class RentalTest {
         assertTrue(testMovie.getTitle() == testRental.getMovie().getTitle());
         assertTrue(testMovie.getPriceCode() == testRental.getMovie().getPriceCode());
     }
+
+
 }
