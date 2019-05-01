@@ -29,7 +29,13 @@ class CustomerTest {
 
     @org.junit.jupiter.api.Test
     void statement() {
-        Assertions.assertTrue(customer.statement().startsWith("Rental Record for John"));
-        Assertions.assertTrue(customer.statement().endsWith(" frequent renter points"));
+        customer.addRental(new Rental(new Movie("childrens", 2), 5));
+        customer.addRental(new Rental(new Movie("regular", 0), 3));
+        customer.addRental(new Rental(new Movie("new release", 1), 10));
+        Assertions.assertTrue(customer.statement().contains("for John"));
+        Assertions.assertTrue(customer.statement().contains("childrens" + "\t" + "\t" + 5 + "\t" + "4.5"));
+        Assertions.assertTrue(customer.statement().contains("regular" + "\t" + "\t" + 3 + "\t" + "3.5"));
+        Assertions.assertTrue(customer.statement().contains("new release" + "\t" + "\t" + 10 + "\t" + "30.0"));
+
     }
 }
