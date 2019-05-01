@@ -34,10 +34,9 @@ class Rental {
     }
 
     int calcPoints() {
-        int points = 1;
         if ((this.movie.getPriceCode() == Movie.NEW_RELEASE) && this.daysRented > 1)
-            points++;
-        return points;
+            return 2;
+        else return 1;
     }
 
 }
